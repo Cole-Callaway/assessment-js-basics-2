@@ -22,9 +22,11 @@
 */
 
 //CODE HERE
-const greetUser = cb => cb(cb)
+const greetUser = userName => {
+    console.log(`Welcome back, ${userName}`)
+}
 
-greetUser(Andrew ) 
+greetUser("Andrew") 
     
 
 
@@ -51,10 +53,22 @@ greetUser(Andrew )
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
+const canWeDeliver = (arr, zipCode, call) => {
+    if (arr.includes(zipCode)=== true) {
+        call(true)
+    } else {
+        call(false)
+    }
+}
+
+canWeDeliver(deliveryAreaZipCodes, 85205, result => {
+    if (result === true) {
+        console.log('we can deliver')
+    } else {
+    console.log('we cant deliver')
+}
+})
 //CODE HERE
-
-
-
 /* 
     Problem 2 Continued
 
@@ -73,8 +87,28 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverThree = deliveryAreaZipCodes.filter(zipCode => zipCode.num === 85205) 
 
 
+console.log('we can deliver still')
+
+const canWeDeliverTwo = (arr, call) => arr.forEach((element, i) => call(element, i)) 
+    
+canWeDeliverTwo(deliveryAreaZipCodes, (zipCode) => console.log(`we can deliver to ${zipCode}`))
+
+// const canWeDeliverTwo = (arr, zipCode, call) => {
+//     for(let i = 0; i < arr.length; i++) {
+//     } if (arr[i].zipCode === zipCode) {
+//         return call(arr[id])
+//     }
+// }
+// canWeDeliverTwo(deliveryAreaZipCodes, 85205, result => {
+//     if (result === true) {
+//         console.log('we can deliver again')
+//     } else {
+//         console.log('we still cant deliver')
+//     }
+// })
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -111,6 +145,10 @@ const deals = [
 //CODE HERE
 
 
+// console.log(newDeal)
+
+// const newDeal = title.replace ('15% Off!', '10% Off!')
+// console.log(newDeal)
 
 /*
     The restaurant is going to continue its
