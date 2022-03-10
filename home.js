@@ -87,7 +87,7 @@ canWeDeliver(deliveryAreaZipCodes, 85205, result => {
 */
 
 // CODE HERE
-const canWeDeliverThree = deliveryAreaZipCodes.filter(zipCode => zipCode.num === 85205) 
+// const canWeDeliverThree = deliveryAreaZipCodes.filter(zipCode => zipCode.num === 85205) 
 
 
 console.log('we can deliver still')
