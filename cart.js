@@ -33,11 +33,25 @@ const cart = [
     }
 ]
 
+
+const priceArr = [9.99, 8.99, 7.99]
 //CODE HERE
+// let totalValue = 0
+// const summedPrice = (acc, item) => {
+//     return acc + item
+// }
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+// const totalPrice = cart.reduce(summedPrice, totalValue)
+// console.log(summedPrice(totalPrice))
+// const totalPrice = cart.reduce(sum, totalSum) => {
+//     sum.price = sum.price * 5
+// }
+console.log(totalPrice)
 
 
+
+// const totalPriceTwo = priceArr.reduce((acc , elem) => acc + elem)
+// console.log(totalPriceTwo)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -54,8 +68,8 @@ const cart = [
 */
 
 //CODE HERE
-
-
+const calcFinalPrice = cart.map(num => num * .06)
+console.log(calcFinalPrice)
 
 //////////////////PROBLEM 3////////////////////
 /*  
