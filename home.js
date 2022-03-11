@@ -143,12 +143,12 @@ const deals = [
 */
 
 //CODE HERE
-
-
-// console.log(newDeal)
-
-// const newDeal = title.replace ('15% Off!', '10% Off!')
-// console.log(newDeal)
+const {title, desc} = deals
+// const hello = 'hello'
+// const bye = hello.replace('hello', 'bye')
+// console.log(bye)
+const newDeal = title.replace ('15% Off!', '10% Off!')
+console.log(newDeal)
 
 /*
     The restaurant is going to continue its
