@@ -121,7 +121,7 @@ console.log(foodArr)
 
 const filteredFood = foodArr.filter(foodTags => foodTags[0] === 'Meat Lovers')
 console.log(filteredFood)
-
+  
 
 //////////////////PROBLEM 5////////////////////
 /* 
