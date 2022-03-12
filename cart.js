@@ -34,19 +34,19 @@ const cart = [
 ]
 
 
-const priceArr = [9.99, 8.99, 7.99]
+// const priceArr = [9.99, 8.99, 7.99]
 //CODE HERE
 // let totalValue = 0
 // const summedPrice = (acc, item) => {
 //     return acc + item
 // }
 
-// const totalPrice = cart.reduce(summedPrice, totalValue)
-// console.log(summedPrice(totalPrice))
+const totalPrice = cart.reduce(summedPrice, totalValue)
+console.log(summedPrice(totalPrice))
 // const totalPrice = cart.reduce(sum, totalSum) => {
-//     sum.price = sum.price * 5
+    // sum.price = sum.price * 5
 // }
-console.log(totalPrice)
+// console.log(totalPrice)
 
 
 
@@ -93,7 +93,7 @@ console.log(calcFinalPrice)
 
 /*
     TEXT ANSWER HERE
-
+Customer name: so we can have a name for the order, Customer address: so we can know where the order is going, Ordered items: so we can know what the customer ordered, Customer Rating: lets the customer leave a rating  
 */
 
 /*
@@ -102,3 +102,9 @@ console.log(calcFinalPrice)
 */
 
 //CODE HERE
+const customer = {
+    name: 'mike',
+    address: '805 Linden AVE',
+    orderedItems: ["pizza", "soda", "garlic bread"],
+    customerRating: 9
+}
