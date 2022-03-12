@@ -40,9 +40,12 @@ const cart = [
 // const summedPrice = (acc, item) => {
 //     return acc + item
 // }
+const totalPrice = cart.reduce((acc, elem) => acc + elem.price, 0)
+console.log(totalPrice)
 
-const totalPrice = cart.reduce(summedPrice, totalValue)
-console.log(summedPrice(totalPrice))
+
+// const totalPrice = cart.reduce(summedPrice, totalValue)
+// console.log(summedPrice(totalPrice))
 // const totalPrice = cart.reduce(sum, totalSum) => {
     // sum.price = sum.price * 5
 // }
@@ -68,7 +71,17 @@ console.log(summedPrice(totalPrice))
 */
 
 //CODE HERE
-const calcFinalPrice = cart.map(num => num * .06)
+const calcFinalPriceTwo = ( cartTotal, couponValue, tax) => {
+    cartTotal = +cartTotal
+    couponValue = -couponValue
+    tax = +tax
+    return cartTotal - couponValue * tax
+}
+
+const grandTotal = calcFinalPriceTwo(26.97, 5, .6)
+console.log(`your total is ${grandTotal}`)
+
+const calcFinalPrice = cart.map(grand => grand.price + (grand.price * .6 ) - 4)
 console.log(calcFinalPrice)
 
 //////////////////PROBLEM 3////////////////////
