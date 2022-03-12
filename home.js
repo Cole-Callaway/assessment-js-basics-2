@@ -147,7 +147,7 @@ const {title, desc} = deals
 // const hello = 'hello'
 // const bye = hello.replace('hello', 'bye')
 // console.log(bye)
-const newDeal = title.replace ('15% Off!', '10% Off!')
+const newDeal = deals.replace(newTitle => newTitle.price('15% Off!', "10% Off"))
 console.log(newDeal)
 
 /*
