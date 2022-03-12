@@ -87,7 +87,7 @@ pizza.price = 14.99
 //CODE HERE
 const {category} = pizza
 pizza.category = 'Pizza'
-// console.log(pizza)
+console.log(pizza)
 // console.log(category)
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -163,7 +163,7 @@ console.log(filteredFood)
 */
 
 //CODE HERE
-const filterByProperty = (property, num, type)
+// const filterByProperty = (property, num, type)
 
 /*
     Invoke the `filterByProperty` function passing

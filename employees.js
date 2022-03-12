@@ -27,7 +27,7 @@ class Employee {
     }
 
 getSchedule(schedule) {
-    console.log(`${name} works on ${this.shits}`)
+    console.log(`${this.name} works on ${this.shits}`)
 }
 
 }
