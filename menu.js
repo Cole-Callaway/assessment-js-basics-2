@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -32,14 +31,13 @@
 
 //CODE HERE
 const pizza = {
-    name: "Cowboy",
-    price: 13.99,
-    category: "entree",
-    popularity: 20,
-    rating: 8,
-    tags: ['gluten free', 'favorite', 'Meat Lovers']
-} 
-
+  name: "Cowboy",
+  price: 13.99,
+  category: "entree",
+  popularity: 20,
+  rating: 8,
+  tags: ["gluten free", "favorite", "Meat Lovers"],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -61,7 +59,7 @@ const pizza = {
 
 //CODE HERE
 // console.log(pizza.tags)
-let index = 1
+let index = 1;
 // console.log(pizza.tags[index])
 /*
     Third, destructure the price off of the
@@ -72,9 +70,9 @@ let index = 1
 
 //CODE HERE
 
-const {price} = pizza
- // console.log(pizza)
-pizza.price = 14.99
+const { price } = pizza;
+// console.log(pizza)
+pizza.price = 14.99;
 
 // console.log(price)
 /*
@@ -85,9 +83,9 @@ pizza.price = 14.99
 */
 
 //CODE HERE
-const {category} = pizza
-pizza.category = 'Pizza'
-console.log(pizza)
+const { category } = pizza;
+pizza.category = "Pizza";
+// console.log(pizza);
 // console.log(category)
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -102,8 +100,33 @@ console.log(pizza)
 */
 
 //CODE HERE
-foodArr = [{name:'BBQ', price: 15.99, category:'Pan', pop: 9, rating: 8, tags:['Meat Lovers', "Fan favorite", 'Best With Coke'],}]
-console.log(foodArr)
+const foodArr = [
+  {
+    name: "BBQ",
+    price: 15.99,
+    category: "Pan",
+    pop: 9,
+    rating: 8,
+    tags: ["Meat Lovers", "Fan favorite", "Best With Coke"],
+  },
+  {
+    name: "cheese",
+    price: 15.99,
+    category: "Pan",
+    pop: 9,
+    rating: 8,
+    tags: ["Meat Lovers", "Fan favorite", "Best With Coke"],
+  },
+  {
+    name: "Chicken",
+    price: 15.99,
+    category: "Pan",
+    pop: 9,
+    rating: 8,
+    tags: ["Meat Lovers", "Fan favorite", "Best With Coke"],
+  },
+];
+// console.log(foodArr);
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -119,10 +142,15 @@ console.log(foodArr)
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(foodTags => foodTags[0] === 'Meat Lovers')
-console.log(filteredFood)
-  
+// const filteredFood = foodArr.filter(foodTags => foodTags[0] === 'Meat Lovers')
+// console.log(filteredFood)
+const getFoodByMeatLovers = (foodObj, currentIndex, array) => {
+  const isTagIncluded = foodObj.tags.includes("Meat Lovers");
+  return isTagIncluded;
+};
 
+const filteredFood = foodArr.filter(getFoodByMeatLovers);
+console.log(filteredFood);
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -164,20 +192,20 @@ console.log(filteredFood)
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
-    const filteredArray = foodArr.filter((food, index, array) => {
-      if (type === 'above') {
-        if (food[property] > number) {
-          return food
-        }
-      } else {
-        if (food[property] < number) {
-          return food
-        }
+  const filteredArray = foodArr.filter((food, index, array) => {
+    if (type === "above") {
+      if (food[property] > number) {
+        return food;
       }
-    })
-  
-    return filteredArray
-  }
+    } else {
+      if (food[property] < number) {
+        return food;
+      }
+    }
+  });
+
+  return filteredArray;
+};
 
 /*
     Invoke the `filterByProperty` function passing
@@ -187,4 +215,4 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
-console.log(filterByProperty('price', 6, 'below'))
+// console.log(filterByProperty("price", 6, "below"));
